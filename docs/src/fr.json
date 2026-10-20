@@ -1,0 +1,102 @@
+{
+  "title": "Spam Shield - CAPTCHA, reCAPTCHA & Turnstile",
+  "subtitle": "Guide d'utilisation",
+  "labels": { "version": "Version", "author": "Auteur", "contact": "Contact", "page": "Page", "contents": "Sommaire", "compat": "Compatibilité" },
+  "sections": [
+    { "title": "Présentation", "content": [
+      { "p": "Spam Shield protège votre boutique PrestaShop contre les messages indésirables, les faux comptes clients et les inscriptions de robots. Il combine un honeypot invisible, des listes noires d'IP et d'e-mails et le CAPTCHA de votre choix : un CAPTCHA image hébergé sur votre serveur, Google reCAPTCHA (v2, v3 ou Enterprise) ou Cloudflare Turnstile." },
+      { "p": "**Formulaires protégeables :**" },
+      { "ul": ["Formulaire de contact", "Formulaire d'inscription", "Formulaire de connexion", "Formulaire de mot de passe oublié", "Formulaire d'inscription à la newsletter", "Formulaire d'alerte de rupture de stock (« Me prévenir lorsque le produit est disponible »)"] },
+      { "p": "Le module ne modifie ni les fichiers du cœur ni les templates du thème. Il fonctionne avec les thèmes Classic et Hummingbird et avec la plupart des thèmes personnalisés." }
+    ] },
+    { "title": "Prérequis", "content": [
+      { "ul": ["PrestaShop 9.0 ou plus récent", "PHP 8.1 ou plus récent avec les extensions GD et cURL (activées chez presque tous les hébergeurs)"] }
+    ] },
+    { "title": "Installation", "content": [
+      { "ol": ["Dans votre back-office, allez dans **Modules > Gestionnaire de modules**.", "Cliquez sur **Installer un module** et choisissez le fichier spamshield-x.y.z.zip.", "Une fois l'installation terminée, cliquez sur **Configurer**."] },
+      { "p": "Après l'installation, le module est déjà actif avec le CAPTCHA image sur les formulaires de contact, d'inscription, de mot de passe oublié, de newsletter et d'alerte de stock." }
+    ] },
+    { "title": "Démarrage rapide", "content": [
+      { "p": "Pour la plupart des boutiques, ces réglages offrent une forte protection avec très peu de gêne :" },
+      { "ul": ["**Type de protection :** CAPTCHA image, ou Cloudflare Turnstile si vous ne voulez aucun test à résoudre.", "**Honeypot invisible et minuteur :** Oui.", "**Ignorer pour les clients connectés :** Oui.", "**Formulaire de connexion :** Non, sauf si vous constatez des attaques sur la page de connexion."] },
+      { "note": "Cliquez sur Enregistrer en bas de n'importe quel bloc : tous les blocs sont enregistrés ensemble." }
+    ] },
+    { "title": "Paramètres généraux", "content": [
+      { "table": [
+        ["Paramètre", "Rôle"],
+        ["Type de protection", "La vérification affichée sur les formulaires protégés : CAPTCHA image, reCAPTCHA v2, reCAPTCHA v3, reCAPTCHA Enterprise (case à cocher ou score), Cloudflare Turnstile, ou Aucun (honeypot et listes noires uniquement)."],
+        ["Formulaire de contact ... Formulaire d'alerte de rupture de stock", "Active ou désactive la protection de chaque formulaire."],
+        ["Ignorer pour les clients connectés", "Les clients connectés ne verront pas de CAPTCHA sur les formulaires de contact, de newsletter et d'alerte de stock."],
+        ["Honeypot invisible et minuteur", "Ajoute un champ caché que seuls les robots remplissent et refuse les formulaires envoyés plus vite qu'un humain ne peut taper."],
+        ["Secondes minimum avant l'envoi", "Les formulaires envoyés plus vite sont considérés comme des robots. 2 secondes est une valeur sûre."],
+        ["Autoriser les envois si le fournisseur est indisponible", "Si Google ou Cloudflare est injoignable, le formulaire est accepté au lieu d'être bloqué. La tentative est tout de même journalisée."],
+        ["Thème du widget", "Apparence claire, sombre ou automatique pour reCAPTCHA et Turnstile."],
+        ["Journaliser les tentatives bloquées", "Conserve la liste des envois bloqués. Les entrées de plus de 90 jours sont supprimées automatiquement."]
+      ] }
+    ] },
+    { "title": "CAPTCHA image", "content": [
+      { "p": "Le CAPTCHA image est généré sur votre propre serveur : aucune donnée de visiteur n'est envoyée à un tiers. Les caractères qui se ressemblent (0/O, 1/I/L, 2/Z, 5/S, 8/B) ne sont jamais utilisés. Majuscules et minuscules sont acceptées." },
+      { "table": [
+        ["Difficulté", "Code"],
+        ["Facile", "4 chiffres, presque sans bruit"],
+        ["Moyen", "5 caractères avec lignes et bruit (recommandé)"],
+        ["Difficile", "6 caractères tournés et déformés"]
+      ] },
+      { "p": "Chaque code ne peut servir qu'une fois. Les visiteurs peuvent cliquer sur le bouton d'actualisation pour obtenir un nouveau code." }
+    ] },
+    { "title": "Google reCAPTCHA v2 et v3", "content": [
+      { "ol": ["Ouvrez https://www.google.com/recaptcha/admin et connectez-vous avec votre compte Google.", "Créez un nouveau site. Choisissez **reCAPTCHA v2 > case « Je ne suis pas un robot »** ou **reCAPTCHA v3**.", "Ajoutez le domaine de votre boutique (par exemple maboutique.com).", "Copiez la clé de site et la clé secrète dans les champs correspondants du module, puis cliquez sur Enregistrer.", "Sélectionnez la même version dans **Type de protection**."] },
+      { "note": "Les versions v2 et v3 utilisent des clés différentes. Une clé v3 ne fonctionne pas avec le réglage v2, et inversement." },
+      { "p": "**Score minimum v3 :** reCAPTCHA v3 attribue à chaque visiteur un score de 0.0 (robot) à 1.0 (humain). Les envois sous le score minimum sont bloqués. Commencez par 0.5 ; descendez à 0.3 si de vrais clients sont bloqués." }
+    ] },
+    { "title": "Google reCAPTCHA Enterprise", "content": [
+      { "ol": ["Dans Google Cloud Console, créez ou choisissez un projet et activez l'**API reCAPTCHA Enterprise**.", "Dans **Sécurité > reCAPTCHA**, créez une clé pour votre site. Choisissez une clé à case à cocher ou une clé basée sur le score.", "Dans **API et services > Identifiants**, créez une clé API et limitez-la à l'API reCAPTCHA Enterprise.", "Dans le module, renseignez l'ID du projet Google Cloud, la clé API et la clé de site.", "Sélectionnez **Google reCAPTCHA Enterprise (case à cocher)** ou **(score)** dans Type de protection, selon le type de clé."] }
+    ] },
+    { "title": "Cloudflare Turnstile", "content": [
+      { "ol": ["Connectez-vous sur https://dash.cloudflare.com et ouvrez **Turnstile**.", "Cliquez sur **Add widget**, saisissez le domaine de votre boutique et choisissez le mode **Managed**.", "Copiez la clé de site et la clé secrète dans le bloc Turnstile du module.", "Sélectionnez **Cloudflare Turnstile** dans Type de protection et enregistrez."] },
+      { "p": "Turnstile est gratuit, respecte la vie privée et ne demande généralement aucun clic au visiteur." }
+    ] },
+    { "title": "Listes noires et liste blanche", "content": [
+      { "p": "Écrivez une règle par ligne. Les lignes commençant par # sont des commentaires." },
+      { "caption": "Liste noire et liste blanche d'IP", "table": [
+        ["Règle", "Correspond à"],
+        ["203.0.113.7", "Cette adresse exacte"],
+        ["203.0.113.*", "De 203.0.113.0 à 203.0.113.255"],
+        ["203.0.113.0/24", "La même plage en notation CIDR"],
+        ["203.0.113.10-203.0.113.50", "Toutes les adresses de cette plage"],
+        ["2001:db8::/32", "Un réseau IPv6"]
+      ] },
+      { "caption": "Liste noire d'e-mails", "table": [
+        ["Règle", "Correspond à"],
+        ["spam@example.com", "Cette adresse exacte"],
+        ["*@mail.ru", "Toutes les adresses chez mail.ru"],
+        ["qq.com", "qq.com et tous ses sous-domaines"],
+        ["*.ru", "Toutes les adresses se terminant par .ru"],
+        ["seo*@*", "Toute adresse commençant par « seo »"]
+      ] },
+      { "note": "Les IP de la liste blanche ne voient jamais de CAPTCHA et ne sont jamais bloquées. Ajoutez l'IP de votre bureau si vous testez souvent les formulaires." }
+    ] },
+    { "title": "Journal des tentatives bloquées", "content": [
+      { "p": "Le bas de la page de configuration indique combien d'envois ont été bloqués par formulaire sur les 30 derniers jours, ainsi que les 100 tentatives les plus récentes avec date, formulaire, motif, adresse IP et e-mail." },
+      { "table": [
+        ["Motif", "Signification"],
+        ["Honeypot rempli", "Un champ caché a été rempli : presque certainement un robot."],
+        ["Envoyé trop vite", "Le formulaire a été envoyé avant le délai minimum."],
+        ["CAPTCHA non complété", "Aucune réponse au CAPTCHA n'a été envoyée."],
+        ["Code incorrect", "Le code de l'image était faux."],
+        ["Jeton invalide / Score trop faible", "Google ou Cloudflare n'a pas validé le visiteur."],
+        ["Liste noire d'IP / Liste noire d'e-mails", "Le visiteur correspond à l'une de vos règles."]
+      ] }
+    ] },
+    { "title": "Dépannage", "content": [
+      { "p": "**Le CAPTCHA ne s'affiche pas.** Videz le cache dans **Paramètres avancés > Performances**, puis rechargez la page. Vérifiez que le formulaire est activé dans le module." },
+      { "p": "**reCAPTCHA affiche « Domaine non valide pour la clé de site ».** Ajoutez le domaine de votre boutique dans la console d'administration Google reCAPTCHA." },
+      { "p": "**De vrais clients sont bloqués avec reCAPTCHA v3.** Baissez le score minimum à 0.3, ou utilisez Turnstile ou le CAPTCHA image." },
+      { "p": "**Je ne peux plus accéder aux formulaires.** Ajoutez votre adresse IP à la liste blanche, ou réglez Type de protection sur Aucun." }
+    ] },
+    { "title": "Assistance", "content": [
+      { "p": "Ce module est gratuit et open source sous licence Academic Free License 3.0. Pour toute question, tout signalement de bug ou développement sur mesure :" },
+      { "ul": ["E-mail : iamshoaibktk@gmail.com", "WhatsApp : +923459016286"] }
+    ] }
+  ]
+}

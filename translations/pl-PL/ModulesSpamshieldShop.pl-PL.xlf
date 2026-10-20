@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="spamshield" source-language="en-US" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="8d4f9cc2b774b1a2b4490095af942cea">
+        <source>Enter the code shown</source>
+        <target>Wpisz widoczny kod</target>
+      </trans-unit>
+      <trans-unit id="353a5bac5df44648fc6b49a0da08b3eb">
+        <source>Get a new code</source>
+        <target>Pobierz nowy kod</target>
+      </trans-unit>
+      <trans-unit id="792bb28aea0e109daf741be7eb18ec87">
+        <source>Security code</source>
+        <target>Kod bezpieczeństwa</target>
+      </trans-unit>
+      <trans-unit id="7a48423600a8de29f11cbb04c8e23fb5">
+        <source>Leave this field empty</source>
+        <target>Pozostaw to pole puste</target>
+      </trans-unit>
+      <trans-unit id="f18722bfce3318dc3c254f0bc96e0719">
+        <source>The security code is incorrect. Please try again.</source>
+        <target>Kod bezpieczeństwa jest nieprawidłowy. Spróbuj ponownie.</target>
+      </trans-unit>
+      <trans-unit id="de573860b6bbf95e97c28e8b4d72e2f1">
+        <source>You submitted the form too quickly. Please wait a moment and try again.</source>
+        <target>Formularz został wysłany zbyt szybko. Odczekaj chwilę i spróbuj ponownie.</target>
+      </trans-unit>
+      <trans-unit id="6f12b38e45dd1e556600f7fb70a83b68">
+        <source>Your request has been blocked. Please contact us if you think this is a mistake.</source>
+        <target>Twoje żądanie zostało zablokowane. Skontaktuj się z nami, jeśli uważasz, że to pomyłka.</target>
+      </trans-unit>
+      <trans-unit id="e51ed67c39afba878705a7bea6b8bb1c">
+        <source>The security check is temporarily unavailable. Please try again in a few minutes.</source>
+        <target>Weryfikacja bezpieczeństwa jest chwilowo niedostępna. Spróbuj ponownie za kilka minut.</target>
+      </trans-unit>
+      <trans-unit id="523dd516fc47178adc7b1504e1ee9be8">
+        <source>Please complete the security check and try again.</source>
+        <target>Ukończ weryfikację bezpieczeństwa i spróbuj ponownie.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

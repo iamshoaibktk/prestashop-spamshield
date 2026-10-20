@@ -1,0 +1,102 @@
+{
+  "title": "Spam Shield - CAPTCHA, reCAPTCHA & Turnstile",
+  "subtitle": "Gebruikershandleiding",
+  "labels": { "version": "Versie", "author": "Auteur", "contact": "Contact", "page": "Pagina", "contents": "Inhoud", "compat": "Compatibiliteit" },
+  "sections": [
+    { "title": "Overzicht", "content": [
+      { "p": "Spam Shield beschermt uw PrestaShop-winkel tegen spamberichten, nepaccounts en aanmeldingen door bots. De module combineert een onzichtbare honeypot, zwarte lijsten voor IP en e-mail en de CAPTCHA van uw keuze: een zelf gehoste afbeeldings-CAPTCHA, Google reCAPTCHA (v2, v3 of Enterprise) of Cloudflare Turnstile." },
+      { "p": "**Formulieren die u kunt beveiligen:**" },
+      { "ul": ["Contactformulier", "Registratieformulier", "Inlogformulier", "Formulier wachtwoord vergeten", "Inschrijfformulier nieuwsbrief", "Formulier voorraadmelding (\"Laat het me weten als het beschikbaar is\")"] },
+      { "p": "De module wijzigt geen kernbestanden en geen themasjablonen. Ze werkt met de thema's Classic en Hummingbird en met de meeste maatwerkthema's." }
+    ] },
+    { "title": "Vereisten", "content": [
+      { "ul": ["PrestaShop 9.0 of nieuwer", "PHP 8.1 of nieuwer met de extensies GD en cURL (bij bijna elke host ingeschakeld)"] }
+    ] },
+    { "title": "Installatie", "content": [
+      { "ol": ["Ga in de back-office naar **Modules > Modulebeheer**.", "Klik op **Een module uploaden** en kies het bestand spamshield-x.y.z.zip.", "Klik na de installatie op **Configureren**."] },
+      { "p": "Na de installatie is de module al actief met de afbeeldings-CAPTCHA op het contact-, registratie-, wachtwoord-vergeten-, nieuwsbrief- en voorraadmeldingsformulier." }
+    ] },
+    { "title": "Snel aan de slag", "content": [
+      { "p": "Voor de meeste winkels geven deze instellingen sterke bescherming met heel weinig hinder:" },
+      { "ul": ["**Type beveiliging:** Afbeeldings-CAPTCHA, of Cloudflare Turnstile als u helemaal geen puzzel wilt.", "**Onzichtbare honeypot en timer:** Ja.", "**Overslaan voor ingelogde klanten:** Ja.", "**Inlogformulier:** Nee, tenzij u aanvallen op de inlogpagina ziet."] },
+      { "note": "Klik op Opslaan onderaan een willekeurig blok: alle blokken worden samen opgeslagen." }
+    ] },
+    { "title": "Algemene instellingen", "content": [
+      { "table": [
+        ["Instelling", "Wat het doet"],
+        ["Type beveiliging", "De controle op beveiligde formulieren: afbeeldings-CAPTCHA, reCAPTCHA v2, reCAPTCHA v3, reCAPTCHA Enterprise (selectievakje of score), Cloudflare Turnstile of Geen (alleen honeypot en zwarte lijsten)."],
+        ["Contactformulier ... Formulier voorraadmelding", "Zet de beveiliging per formulier aan of uit."],
+        ["Overslaan voor ingelogde klanten", "Ingelogde klanten zien geen CAPTCHA op het contact-, nieuwsbrief- en voorraadmeldingsformulier."],
+        ["Onzichtbare honeypot en timer", "Voegt een verborgen veld toe dat alleen bots invullen en weigert formulieren die sneller worden verzonden dan een mens kan typen."],
+        ["Minimaal aantal seconden vóór verzenden", "Formulieren die sneller worden verzonden, worden als bots behandeld. 2 seconden is een veilige waarde."],
+        ["Verzenden toestaan als de provider niet bereikbaar is", "Als Google of Cloudflare niet bereikbaar is, wordt het formulier doorgelaten in plaats van geblokkeerd. De poging wordt wel gelogd."],
+        ["Widgetthema", "Licht, donker of automatisch uiterlijk voor reCAPTCHA en Turnstile."],
+        ["Geblokkeerde pogingen loggen", "Houdt een lijst van geblokkeerde inzendingen bij. Regels ouder dan 90 dagen worden automatisch verwijderd."]
+      ] }
+    ] },
+    { "title": "Afbeeldings-CAPTCHA", "content": [
+      { "p": "De afbeeldings-CAPTCHA wordt op uw eigen server gemaakt, dus er gaan geen bezoekersgegevens naar derden. Tekens die op elkaar lijken (0/O, 1/I/L, 2/Z, 5/S, 8/B) worden nooit gebruikt. Hoofd- en kleine letters worden allebei geaccepteerd." },
+      { "table": [
+        ["Moeilijkheid", "Code"],
+        ["Makkelijk", "4 cijfers, bijna geen ruis"],
+        ["Gemiddeld", "5 tekens met lijnen en ruis (aanbevolen)"],
+        ["Moeilijk", "6 gedraaide en vervormde tekens"]
+      ] },
+      { "p": "Elke code kan maar één keer worden gebruikt. Bezoekers kunnen op de vernieuwknop klikken voor een nieuwe code." }
+    ] },
+    { "title": "Google reCAPTCHA v2 en v3", "content": [
+      { "ol": ["Open https://www.google.com/recaptcha/admin en log in met uw Google-account.", "Maak een nieuwe site aan. Kies **reCAPTCHA v2 > selectievakje \"Ik ben geen robot\"** of **reCAPTCHA v3**.", "Voeg het domein van uw winkel toe (bijvoorbeeld mijnwinkel.nl).", "Kopieer de sitesleutel en de geheime sleutel naar de bijbehorende velden van de module en klik op Opslaan.", "Kies dezelfde versie bij **Type beveiliging**."] },
+      { "note": "v2 en v3 gebruiken verschillende sleutels. Een v3-sleutel werkt niet met de v2-instelling en omgekeerd." },
+      { "p": "**Minimale score v3:** reCAPTCHA v3 geeft elke bezoeker een score van 0.0 (bot) tot 1.0 (mens). Inzendingen onder de minimale score worden geblokkeerd. Begin met 0.5 en verlaag naar 0.3 als echte klanten worden geblokkeerd." }
+    ] },
+    { "title": "Google reCAPTCHA Enterprise", "content": [
+      { "ol": ["Maak of kies in Google Cloud Console een project en schakel de **reCAPTCHA Enterprise API** in.", "Maak onder **Beveiliging > reCAPTCHA** een sleutel voor uw website. Kies een selectievakjessleutel of een op score gebaseerde sleutel.", "Maak onder **API's en services > Inloggegevens** een API-sleutel en beperk die tot de reCAPTCHA Enterprise-API.", "Vul in de module de Google Cloud-project-ID, de API-sleutel en de sitesleutel in.", "Kies bij Type beveiliging **Google reCAPTCHA Enterprise (selectievakje)** of **(score)**, passend bij het sleuteltype."] }
+    ] },
+    { "title": "Cloudflare Turnstile", "content": [
+      { "ol": ["Log in op https://dash.cloudflare.com en open **Turnstile**.", "Klik op **Add widget**, voer het domein van uw winkel in en kies de modus **Managed**.", "Kopieer de sitesleutel en de geheime sleutel naar het Turnstile-blok van de module.", "Kies **Cloudflare Turnstile** bij Type beveiliging en sla op."] },
+      { "p": "Turnstile is gratis, privacyvriendelijk en vraagt de bezoeker meestal geen enkele klik." }
+    ] },
+    { "title": "Zwarte lijsten en witte lijst", "content": [
+      { "p": "Schrijf één regel per lijn. Regels die met # beginnen, zijn opmerkingen." },
+      { "caption": "Zwarte en witte lijst IP", "table": [
+        ["Regel", "Komt overeen met"],
+        ["203.0.113.7", "Precies dit adres"],
+        ["203.0.113.*", "203.0.113.0 tot 203.0.113.255"],
+        ["203.0.113.0/24", "Hetzelfde bereik in CIDR-notatie"],
+        ["203.0.113.10-203.0.113.50", "Elk adres in dit bereik"],
+        ["2001:db8::/32", "Een IPv6-netwerk"]
+      ] },
+      { "caption": "Zwarte lijst e-mail", "table": [
+        ["Regel", "Komt overeen met"],
+        ["spam@example.com", "Precies dit adres"],
+        ["*@mail.ru", "Elk adres bij mail.ru"],
+        ["qq.com", "qq.com en al zijn subdomeinen"],
+        ["*.ru", "Elk adres dat eindigt op .ru"],
+        ["seo*@*", "Elk adres dat begint met \"seo\""]
+      ] },
+      { "note": "IP's op de witte lijst zien nooit een CAPTCHA en worden nooit geblokkeerd. Zet het IP van uw kantoor op de witte lijst als u de formulieren vaak test." }
+    ] },
+    { "title": "Logboek van geblokkeerde pogingen", "content": [
+      { "p": "Onderaan de configuratiepagina ziet u hoeveel inzendingen per formulier in de afgelopen 30 dagen zijn geblokkeerd, en de 100 meest recente pogingen met datum, formulier, reden, IP-adres en e-mail." },
+      { "table": [
+        ["Reden", "Betekenis"],
+        ["Honeypot ingevuld", "Een verborgen veld is ingevuld: vrijwel zeker een bot."],
+        ["Te snel verzonden", "Het formulier is verzonden vóór de minimale tijd."],
+        ["CAPTCHA niet ingevuld", "Er is geen CAPTCHA-antwoord meegestuurd."],
+        ["Onjuiste code", "De afbeeldingscode was fout."],
+        ["Ongeldig token / Lage score", "Google of Cloudflare heeft de bezoeker niet bevestigd."],
+        ["Zwarte lijst IP / Zwarte lijst e-mail", "De bezoeker komt overeen met een van uw regels."]
+      ] }
+    ] },
+    { "title": "Problemen oplossen", "content": [
+      { "p": "**De CAPTCHA verschijnt niet.** Leeg de cache via **Geavanceerde instellingen > Prestaties** en laad de pagina opnieuw. Controleer of het formulier in de module is ingeschakeld." },
+      { "p": "**reCAPTCHA toont \"Ongeldig domein voor sitesleutel\".** Voeg het domein van uw winkel toe in de beheerconsole van Google reCAPTCHA." },
+      { "p": "**Echte klanten worden geblokkeerd met reCAPTCHA v3.** Verlaag de minimale score naar 0.3 of gebruik Turnstile of de afbeeldings-CAPTCHA." },
+      { "p": "**Ik heb mezelf buitengesloten.** Zet uw IP-adres op de witte lijst IP of stel Type beveiliging in op Geen." }
+    ] },
+    { "title": "Ondersteuning", "content": [
+      { "p": "Deze module is gratis en open source onder de Academic Free License 3.0. Voor vragen, foutmeldingen of maatwerk:" },
+      { "ul": ["E-mail: iamshoaibktk@gmail.com", "WhatsApp: +923459016286"] }
+    ] }
+  ]
+}

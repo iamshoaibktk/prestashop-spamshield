@@ -1,0 +1,15 @@
+/**
+ * @author    iamshoaibktk@gmail.com (WhatsApp: +923459016286)
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
+ */
+.spamshield { margin: 0.75rem 0; width: 100%; }
+.spamshield__hp { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+.spamshield__image { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.spamshield__image img { width: 180px; height: 56px; border: 1px solid #dfe3e8; border-radius: 4px; background: #f6f7f9; }
+.spamshield__refresh { border: 1px solid #dfe3e8; background: #fff; border-radius: 4px; width: 40px; height: 40px; cursor: pointer; font-size: 1.2rem; line-height: 1; }
+.spamshield__refresh:hover { background: #f6f7f9; }
+.spamshield__code { max-width: 200px; text-transform: uppercase; letter-spacing: 0.15em; }
+.spamshield__code::placeholder { text-transform: none; letter-spacing: normal; }
+.spamshield__widget { min-height: 65px; }
+.spamshield__widget--invisible { min-height: 0; }
+@media (max-width: 400px) { .spamshield__widget { transform: scale(0.88); transform-origin: 0 0; } }

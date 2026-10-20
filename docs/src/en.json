@@ -1,0 +1,349 @@
+{
+  "title": "Spam Shield - CAPTCHA, reCAPTCHA & Turnstile",
+  "subtitle": "User guide",
+  "labels": {
+    "version": "Version",
+    "author": "Author",
+    "contact": "Contact",
+    "page": "Page",
+    "contents": "Contents",
+    "compat": "Compatibility"
+  },
+  "sections": [
+    {
+      "title": "Overview",
+      "content": [
+        {
+          "p": "Spam Shield protects your PrestaShop store from spam messages, fake customer accounts and bot sign-ups. It combines an invisible honeypot, IP and e-mail blacklists and the CAPTCHA of your choice: a self-hosted image CAPTCHA, Google reCAPTCHA (v2, v3 or Enterprise) or Cloudflare Turnstile."
+        },
+        {
+          "p": "**Forms you can protect:**"
+        },
+        {
+          "ul": [
+            "Contact form",
+            "Registration form",
+            "Login form",
+            "Forgot password form",
+            "Newsletter subscription form",
+            "Out of stock alert form (\"Notify me when available\")"
+          ]
+        },
+        {
+          "p": "The module does not modify core files or theme templates. It works with the Classic and Hummingbird themes and with most custom themes."
+        }
+      ]
+    },
+    {
+      "title": "Requirements",
+      "content": [
+        {
+          "ul": [
+            "PrestaShop 9.0 or newer",
+            "PHP 8.1 or newer with the GD and cURL extensions (enabled on almost every host)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Installation",
+      "content": [
+        {
+          "ol": [
+            "In your back office, go to **Modules > Module Manager**.",
+            "Click **Upload a module** and choose the file spamshield-x.y.z.zip.",
+            "When the installation is finished, click **Configure**."
+          ]
+        },
+        {
+          "p": "After installation the module is already active with the image CAPTCHA on the contact, registration, forgot password, newsletter and stock alert forms."
+        }
+      ]
+    },
+    {
+      "title": "Quick start",
+      "content": [
+        {
+          "p": "For most stores these settings give strong protection with very little friction:"
+        },
+        {
+          "ul": [
+            "**Protection type:** Image CAPTCHA, or Cloudflare Turnstile if you want no puzzle at all.",
+            "**Invisible honeypot and timer:** Yes.",
+            "**Skip for logged-in customers:** Yes.",
+            "**Login form:** No, unless you see attacks on the login page."
+          ]
+        },
+        {
+          "note": "Click Save at the bottom of any panel: all panels are saved together."
+        }
+      ]
+    },
+    {
+      "title": "General settings",
+      "content": [
+        {
+          "table": [
+            [
+              "Setting",
+              "What it does"
+            ],
+            [
+              "Protection type",
+              "The check shown on protected forms: image CAPTCHA, reCAPTCHA v2, reCAPTCHA v3, reCAPTCHA Enterprise (checkbox or score), Cloudflare Turnstile, or None (honeypot and blacklists only)."
+            ],
+            [
+              "Contact form ... Out of stock alert form",
+              "Turn protection on or off for each form."
+            ],
+            [
+              "Skip for logged-in customers",
+              "Logged-in customers will not see a CAPTCHA on the contact, newsletter and stock alert forms."
+            ],
+            [
+              "Invisible honeypot and timer",
+              "Adds a hidden field that only bots fill in, and rejects forms sent faster than a human could type."
+            ],
+            [
+              "Minimum seconds before submit",
+              "Forms submitted faster than this are treated as bots. 2 seconds is a safe value."
+            ],
+            [
+              "Allow submissions if the provider is down",
+              "If Google or Cloudflare cannot be reached, the form is accepted instead of blocked. The attempt is still logged."
+            ],
+            [
+              "Widget theme",
+              "Light, dark or automatic look for reCAPTCHA and Turnstile."
+            ],
+            [
+              "Log blocked attempts",
+              "Keeps a list of blocked submissions. Entries older than 90 days are removed automatically."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Image CAPTCHA",
+      "content": [
+        {
+          "p": "The image CAPTCHA is generated on your own server, so no visitor data is sent to a third party. Characters that look alike (0/O, 1/I/L, 2/Z, 5/S, 8/B) are never used. Upper and lower case are both accepted."
+        },
+        {
+          "table": [
+            [
+              "Difficulty",
+              "Code"
+            ],
+            [
+              "Easy",
+              "4 digits, almost no noise"
+            ],
+            [
+              "Medium",
+              "5 characters with lines and noise (recommended)"
+            ],
+            [
+              "Hard",
+              "6 rotated and distorted characters"
+            ]
+          ]
+        },
+        {
+          "p": "Each code can be used only once. Visitors can click the refresh button to get a new code."
+        }
+      ]
+    },
+    {
+      "title": "Google reCAPTCHA v2 and v3",
+      "content": [
+        {
+          "ol": [
+            "Open https://www.google.com/recaptcha/admin and sign in with your Google account.",
+            "Create a new site. Choose **reCAPTCHA v2 > \"I'm not a robot\" Checkbox** or **reCAPTCHA v3**.",
+            "Add your shop domain (for example myshop.com).",
+            "Copy the site key and the secret key into the matching fields of the module and click Save.",
+            "Select the same version in **Protection type**."
+          ]
+        },
+        {
+          "note": "v2 and v3 use different keys. A v3 key will not work with the v2 setting, and the other way round."
+        },
+        {
+          "p": "**v3 minimum score:** reCAPTCHA v3 gives each visitor a score from 0.0 (bot) to 1.0 (human). Submissions below the minimum score are blocked. Start with 0.5; lower it to 0.3 if real customers are blocked."
+        }
+      ]
+    },
+    {
+      "title": "Google reCAPTCHA Enterprise",
+      "content": [
+        {
+          "ol": [
+            "In Google Cloud Console, create or choose a project and enable the **reCAPTCHA Enterprise API**.",
+            "Under **Security > reCAPTCHA**, create a key for your website. Choose a checkbox key or a score-based key.",
+            "Under **APIs & Services > Credentials**, create an API key and restrict it to the reCAPTCHA Enterprise API.",
+            "In the module, fill in the Google Cloud project ID, the API key and the site key.",
+            "Select **Google reCAPTCHA Enterprise (checkbox)** or **(score)** in Protection type, matching the key type."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cloudflare Turnstile",
+      "content": [
+        {
+          "ol": [
+            "Sign in at https://dash.cloudflare.com and open **Turnstile**.",
+            "Click **Add widget**, enter your shop domain and choose the **Managed** mode.",
+            "Copy the site key and the secret key into the Turnstile panel of the module.",
+            "Select **Cloudflare Turnstile** in Protection type and save."
+          ]
+        },
+        {
+          "p": "Turnstile is free, privacy-friendly and usually needs no click from the visitor."
+        }
+      ]
+    },
+    {
+      "title": "Blacklists and whitelist",
+      "content": [
+        {
+          "p": "Write one rule per line. Lines starting with # are comments."
+        },
+        {
+          "caption": "IP blacklist and IP whitelist",
+          "table": [
+            [
+              "Rule",
+              "Matches"
+            ],
+            [
+              "203.0.113.7",
+              "This exact address"
+            ],
+            [
+              "203.0.113.*",
+              "203.0.113.0 to 203.0.113.255"
+            ],
+            [
+              "203.0.113.0/24",
+              "The same range in CIDR notation"
+            ],
+            [
+              "203.0.113.10-203.0.113.50",
+              "Every address in this range"
+            ],
+            [
+              "2001:db8::/32",
+              "An IPv6 network"
+            ]
+          ]
+        },
+        {
+          "caption": "E-mail blacklist",
+          "table": [
+            [
+              "Rule",
+              "Matches"
+            ],
+            [
+              "spam@example.com",
+              "This exact address"
+            ],
+            [
+              "*@mail.ru",
+              "Every address at mail.ru"
+            ],
+            [
+              "qq.com",
+              "qq.com and all its subdomains"
+            ],
+            [
+              "*.ru",
+              "Every address ending in .ru"
+            ],
+            [
+              "seo*@*",
+              "Any address that starts with \"seo\""
+            ]
+          ]
+        },
+        {
+          "note": "Whitelisted IPs never see a CAPTCHA and are never blocked. Add your own office IP to the whitelist if you test the forms often."
+        }
+      ]
+    },
+    {
+      "title": "Blocked attempts log",
+      "content": [
+        {
+          "p": "The bottom of the configuration page shows how many submissions were blocked per form in the last 30 days, and the 100 most recent attempts with date, form, reason, IP address and e-mail."
+        },
+        {
+          "table": [
+            [
+              "Reason",
+              "Meaning"
+            ],
+            [
+              "Honeypot filled",
+              "A hidden field was filled in: almost certainly a bot."
+            ],
+            [
+              "Submitted too fast",
+              "The form was sent faster than the minimum time."
+            ],
+            [
+              "CAPTCHA not completed",
+              "No CAPTCHA answer was sent."
+            ],
+            [
+              "Wrong code",
+              "The image code was wrong."
+            ],
+            [
+              "Invalid token / Low score",
+              "Google or Cloudflare did not confirm the visitor."
+            ],
+            [
+              "IP blacklist / E-mail blacklist",
+              "The visitor matched one of your rules."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "content": [
+        {
+          "p": "**The CAPTCHA does not appear.** Clear the cache in **Advanced Parameters > Performance**, then reload the page. Check that the form is switched on in the module."
+        },
+        {
+          "p": "**reCAPTCHA shows \"Invalid domain for site key\".** Add your shop domain in the Google reCAPTCHA admin console."
+        },
+        {
+          "p": "**Real customers are blocked with reCAPTCHA v3.** Lower the minimum score to 0.3, or use Turnstile or the image CAPTCHA."
+        },
+        {
+          "p": "**I locked myself out.** Add your IP address to the IP whitelist, or set Protection type to None."
+        }
+      ]
+    },
+    {
+      "title": "Support",
+      "content": [
+        {
+          "p": "This module is free and open source under the Academic Free License 3.0. For questions, bug reports or custom work:"
+        },
+        {
+          "ul": [
+            "E-mail: iamshoaibktk@gmail.com",
+            "WhatsApp: +923459016286"
+          ]
+        }
+      ]
+    }
+  ]
+}

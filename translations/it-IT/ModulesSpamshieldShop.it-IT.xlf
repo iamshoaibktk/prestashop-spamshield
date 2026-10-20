@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="spamshield" source-language="en-US" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="8d4f9cc2b774b1a2b4490095af942cea">
+        <source>Enter the code shown</source>
+        <target>Inserisci il codice mostrato</target>
+      </trans-unit>
+      <trans-unit id="353a5bac5df44648fc6b49a0da08b3eb">
+        <source>Get a new code</source>
+        <target>Ottieni un nuovo codice</target>
+      </trans-unit>
+      <trans-unit id="792bb28aea0e109daf741be7eb18ec87">
+        <source>Security code</source>
+        <target>Codice di sicurezza</target>
+      </trans-unit>
+      <trans-unit id="7a48423600a8de29f11cbb04c8e23fb5">
+        <source>Leave this field empty</source>
+        <target>Lascia vuoto questo campo</target>
+      </trans-unit>
+      <trans-unit id="f18722bfce3318dc3c254f0bc96e0719">
+        <source>The security code is incorrect. Please try again.</source>
+        <target>Il codice di sicurezza non è corretto. Riprova.</target>
+      </trans-unit>
+      <trans-unit id="de573860b6bbf95e97c28e8b4d72e2f1">
+        <source>You submitted the form too quickly. Please wait a moment and try again.</source>
+        <target>Hai inviato il modulo troppo velocemente. Attendi un momento e riprova.</target>
+      </trans-unit>
+      <trans-unit id="6f12b38e45dd1e556600f7fb70a83b68">
+        <source>Your request has been blocked. Please contact us if you think this is a mistake.</source>
+        <target>La tua richiesta è stata bloccata. Contattaci se pensi che si tratti di un errore.</target>
+      </trans-unit>
+      <trans-unit id="e51ed67c39afba878705a7bea6b8bb1c">
+        <source>The security check is temporarily unavailable. Please try again in a few minutes.</source>
+        <target>La verifica di sicurezza è temporaneamente non disponibile. Riprova tra qualche minuto.</target>
+      </trans-unit>
+      <trans-unit id="523dd516fc47178adc7b1504e1ee9be8">
+        <source>Please complete the security check and try again.</source>
+        <target>Completa la verifica di sicurezza e riprova.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

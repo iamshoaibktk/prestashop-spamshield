@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="spamshield" source-language="en-US" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="f9e23bcac466ce28185df946c5134361">
+        <source>Spam Shield - CAPTCHA, reCAPTCHA &amp; Turnstile</source>
+        <target>Spam Shield - CAPTCHA, reCAPTCHA &amp; Turnstile</target>
+      </trans-unit>
+      <trans-unit id="4a1c3ffec90c73119196a311949dad32">
+        <source>Stop spam and fake accounts with image CAPTCHA, Google reCAPTCHA, Cloudflare Turnstile, honeypot and IP/email blacklists.</source>
+        <target>Zatrzymaj spam i fałszywe konta dzięki obrazkowej CAPTCHA, Google reCAPTCHA, Cloudflare Turnstile, honeypotowi oraz czarnym listom IP i e-maili.</target>
+      </trans-unit>
+      <trans-unit id="bb8956c67b82c7444a80c6b2433dd8b4">
+        <source>Are you sure you want to uninstall this module?</source>
+        <target>Czy na pewno chcesz odinstalować ten moduł?</target>
+      </trans-unit>
+      <trans-unit id="dd4707587ba4507aa136adc20d835b09">
+        <source>The log has been cleared.</source>
+        <target>Dziennik został wyczyszczony.</target>
+      </trans-unit>
+      <trans-unit id="f38f5974cdc23279ffe6d203641a8bdf">
+        <source>Settings updated.</source>
+        <target>Ustawienia zaktualizowane.</target>
+      </trans-unit>
+      <trans-unit id="99695e03bd533e6920f24a5b0a9241e8">
+        <source>Please fill in the keys for the selected CAPTCHA provider.</source>
+        <target>Uzupełnij klucze wybranego dostawcy CAPTCHA.</target>
+      </trans-unit>
+      <trans-unit id="ddbf4c172088c175c9996c8f15c9775d">
+        <source>The minimum score must be between 0.0 and 1.0.</source>
+        <target>Minimalny wynik musi mieścić się w przedziale od 0.0 do 1.0.</target>
+      </trans-unit>
+      <trans-unit id="c661cf76442d8d2cb318d560285a2a57">
+        <source>Contact form</source>
+        <target>Formularz kontaktowy</target>
+      </trans-unit>
+      <trans-unit id="a96005bf7f6f4b6f39485a58ecf911dc">
+        <source>Registration form</source>
+        <target>Formularz rejestracji</target>
+      </trans-unit>
+      <trans-unit id="8e756404c01867410817b8601522e88c">
+        <source>Login form</source>
+        <target>Formularz logowania</target>
+      </trans-unit>
+      <trans-unit id="24763045e0b01df88f40d84086699103">
+        <source>Forgot password form</source>
+        <target>Formularz przypomnienia hasła</target>
+      </trans-unit>
+      <trans-unit id="8eedac63fc2e736390628b44e72235bc">
+        <source>Newsletter subscription form</source>
+        <target>Formularz zapisu do newslettera</target>
+      </trans-unit>
+      <trans-unit id="c7cc3987297f5230512087dbe20b8939">
+        <source>Out of stock alert form</source>
+        <target>Formularz powiadomienia o dostępności</target>
+      </trans-unit>
+      <trans-unit id="d148d95f3b8a9643a2961dc88c971f47">
+        <source>IP blacklist</source>
+        <target>Czarna lista IP</target>
+      </trans-unit>
+      <trans-unit id="ba2b1527ac686389a02a1d9d9a2f4b5b">
+        <source>E-mail blacklist</source>
+        <target>Czarna lista e-maili</target>
+      </trans-unit>
+      <trans-unit id="ce24cf01904fb1b3f71d2434812541fd">
+        <source>Honeypot filled</source>
+        <target>Wypełniony honeypot</target>
+      </trans-unit>
+      <trans-unit id="f8e1e177be43ef03aa71988c6420d3d7">
+        <source>Submitted too fast</source>
+        <target>Wysłano zbyt szybko</target>
+      </trans-unit>
+      <trans-unit id="5251b091b791e8b52b414d6a1892f149">
+        <source>CAPTCHA not completed</source>
+        <target>CAPTCHA nieukończona</target>
+      </trans-unit>
+      <trans-unit id="404357bae8c57e8dae41b90bfa5a1533">
+        <source>Wrong code</source>
+        <target>Błędny kod</target>
+      </trans-unit>
+      <trans-unit id="607e1d854783c8229998ac2b5b6923d3">
+        <source>Invalid token</source>
+        <target>Nieprawidłowy token</target>
+      </trans-unit>
+      <trans-unit id="5951d5eb0662d68deac63d7306c802e4">
+        <source>Low score</source>
+        <target>Niski wynik</target>
+      </trans-unit>
+      <trans-unit id="857af88823de5f18d429e9961f9497dd">
+        <source>Action mismatch</source>
+        <target>Niezgodna akcja</target>
+      </trans-unit>
+      <trans-unit id="cf388a18ddb6160c9c627f988476f944">
+        <source>Provider unreachable</source>
+        <target>Dostawca nieosiągalny</target>
+      </trans-unit>
+      <trans-unit id="5fc26b40576a9b81cd008e0fd1cda135">
+        <source>Provider unreachable (allowed)</source>
+        <target>Dostawca nieosiągalny (dopuszczono)</target>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435">
+        <source>Yes</source>
+        <target>Tak</target>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b">
+        <source>No</source>
+        <target>Nie</target>
+      </trans-unit>
+      <trans-unit id="de62775a71fc2bf7a13d7530ae24a7ed">
+        <source>General settings</source>
+        <target>Ustawienia ogólne</target>
+      </trans-unit>
+      <trans-unit id="c4a6840fb3d43a21880eb5b594a615c1">
+        <source>Protection type</source>
+        <target>Rodzaj ochrony</target>
+      </trans-unit>
+      <trans-unit id="01b4d312beb8d9d1e680f94a4f04c5ef">
+        <source>Honeypot and blacklists always work. Choose which visible or invisible check is added on top of them.</source>
+        <target>Honeypot i czarne listy działają zawsze. Wybierz, jaka widoczna lub niewidoczna weryfikacja zostanie dodana.</target>
+      </trans-unit>
+      <trans-unit id="727d978e6be2a51828703985cb208f04">
+        <source>Image CAPTCHA (self-hosted, no third party)</source>
+        <target>CAPTCHA obrazkowa (lokalna, bez usług zewnętrznych)</target>
+      </trans-unit>
+      <trans-unit id="8df455a411498dcea7c3c69f4851e978">
+        <source>Google reCAPTCHA v2 (checkbox)</source>
+        <target>Google reCAPTCHA v2 (pole wyboru)</target>
+      </trans-unit>
+      <trans-unit id="6ac8a7c254e866747057a514dd8d7271">
+        <source>Google reCAPTCHA v3 (invisible, score)</source>
+        <target>Google reCAPTCHA v3 (niewidoczna, wynik)</target>
+      </trans-unit>
+      <trans-unit id="e259446e32b7218c8fc2870a709afe9b">
+        <source>Google reCAPTCHA Enterprise (checkbox)</source>
+        <target>Google reCAPTCHA Enterprise (pole wyboru)</target>
+      </trans-unit>
+      <trans-unit id="da9ee0689dce630984056ab47734b766">
+        <source>Google reCAPTCHA Enterprise (score)</source>
+        <target>Google reCAPTCHA Enterprise (wynik)</target>
+      </trans-unit>
+      <trans-unit id="7b1ae689f336775afa7835a9da7be645">
+        <source>Cloudflare Turnstile</source>
+        <target>Cloudflare Turnstile</target>
+      </trans-unit>
+      <trans-unit id="03631da289cfd05bf3a24dadb8f28c9b">
+        <source>None (honeypot and blacklists only)</source>
+        <target>Brak (tylko honeypot i czarne listy)</target>
+      </trans-unit>
+      <trans-unit id="9e6e32632b601b32cfea94c46a3c7957">
+        <source>Skip for logged-in customers</source>
+        <target>Pomiń dla zalogowanych klientów</target>
+      </trans-unit>
+      <trans-unit id="d6b07096cab2e7f3ad6c171cf3a61bed">
+        <source>Logged-in customers will not see a CAPTCHA on the contact, newsletter and stock alert forms.</source>
+        <target>Zalogowani klienci nie zobaczą CAPTCHA w formularzach kontaktu, newslettera i powiadomień o dostępności.</target>
+      </trans-unit>
+      <trans-unit id="4c1d759b75a7209bf23eb8c0a1747ba4">
+        <source>Invisible honeypot and timer</source>
+        <target>Niewidoczny honeypot i licznik czasu</target>
+      </trans-unit>
+      <trans-unit id="f37fba0cea271a572cbe103af97e5327">
+        <source>Blocks bots that fill hidden fields or submit faster than a human, without bothering real visitors.</source>
+        <target>Blokuje boty, które wypełniają ukryte pola lub wysyłają szybciej niż człowiek, nie przeszkadzając prawdziwym odwiedzającym.</target>
+      </trans-unit>
+      <trans-unit id="1fe67a85409d4f82c87b6355258e5aed">
+        <source>Minimum seconds before submit</source>
+        <target>Minimalna liczba sekund przed wysłaniem</target>
+      </trans-unit>
+      <trans-unit id="0fc60f9b827ef7cce7030d949d658291">
+        <source>Forms submitted faster than this are treated as bots.</source>
+        <target>Formularze wysłane szybciej są traktowane jako boty.</target>
+      </trans-unit>
+      <trans-unit id="bc11f343d1ee85c877f186a8bb8cb9f9">
+        <source>Allow submissions if the provider is down</source>
+        <target>Zezwalaj na wysyłanie, gdy dostawca jest niedostępny</target>
+      </trans-unit>
+      <trans-unit id="6075be34e48b6292352d6a5e4d1e766d">
+        <source>If Google or Cloudflare cannot be reached, let the form through instead of blocking it.</source>
+        <target>Jeśli Google lub Cloudflare jest nieosiągalny, formularz zostanie przepuszczony zamiast zablokowany.</target>
+      </trans-unit>
+      <trans-unit id="6f02ca9748c6a2d9d675d74b9b8b25bf">
+        <source>Widget theme</source>
+        <target>Motyw widżetu</target>
+      </trans-unit>
+      <trans-unit id="9914a0ce04a7b7b6a8e39bec55064b82">
+        <source>Light</source>
+        <target>Jasny</target>
+      </trans-unit>
+      <trans-unit id="a18366b217ebf811ad1886e4f4f865b2">
+        <source>Dark</source>
+        <target>Ciemny</target>
+      </trans-unit>
+      <trans-unit id="086247a9b57fde6eefee2a0c4752242d">
+        <source>Automatic</source>
+        <target>Automatyczny</target>
+      </trans-unit>
+      <trans-unit id="215f096b73195a397d487407d712e137">
+        <source>Log blocked attempts</source>
+        <target>Zapisuj zablokowane próby</target>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
+        <source>Save</source>
+        <target>Zapisz</target>
+      </trans-unit>
+      <trans-unit id="f660b7c0dd7ca2e9c90a8e9acd915fa1">
+        <source>Image CAPTCHA</source>
+        <target>CAPTCHA obrazkowa</target>
+      </trans-unit>
+      <trans-unit id="7b29ca96ada2afa3aadbcf55cd61a1ed">
+        <source>Difficulty</source>
+        <target>Poziom trudności</target>
+      </trans-unit>
+      <trans-unit id="cd8988685350ea2d218e64c1ecd543d5">
+        <source>Easy (4 digits)</source>
+        <target>Łatwy (4 cyfry)</target>
+      </trans-unit>
+      <trans-unit id="e6565afccfb42256ed3fcb69153a1e40">
+        <source>Medium (5 characters)</source>
+        <target>Średni (5 znaków)</target>
+      </trans-unit>
+      <trans-unit id="2bc9ac4bccebfe502a4163861e75a9ce">
+        <source>Hard (6 distorted characters)</source>
+        <target>Trudny (6 zniekształconych znaków)</target>
+      </trans-unit>
+      <trans-unit id="78b2fcbf7562a483d6510aa9e6e30c51">
+        <source>Google reCAPTCHA</source>
+        <target>Google reCAPTCHA</target>
+      </trans-unit>
+      <trans-unit id="1a5ae3750877d350abb3367d88a51e1f">
+        <source>Create keys at https://www.google.com/recaptcha/admin. v2 and v3 need different keys.</source>
+        <target>Utwórz klucze na https://www.google.com/recaptcha/admin. Wersje v2 i v3 wymagają różnych kluczy.</target>
+      </trans-unit>
+      <trans-unit id="9610613a2d407a8cb90fe8dbe890be79">
+        <source>v2 site key</source>
+        <target>Klucz witryny v2</target>
+      </trans-unit>
+      <trans-unit id="6af7ddb0c3c78768a9528de3abc09eba">
+        <source>v2 secret key</source>
+        <target>Klucz tajny v2</target>
+      </trans-unit>
+      <trans-unit id="1d5754a57c5a3b730b05257cf68445e5">
+        <source>v3 site key</source>
+        <target>Klucz witryny v3</target>
+      </trans-unit>
+      <trans-unit id="b3468bd7ea2d605e81d945f16e127a00">
+        <source>v3 secret key</source>
+        <target>Klucz tajny v3</target>
+      </trans-unit>
+      <trans-unit id="14348e74eb322af596a164b45b52fff2">
+        <source>v3 minimum score</source>
+        <target>Minimalny wynik v3</target>
+      </trans-unit>
+      <trans-unit id="0d3ff706362e28a67a39696a991a1fa8">
+        <source>From 0.0 (bot) to 1.0 (human). 0.5 is a good start.</source>
+        <target>Od 0.0 (bot) do 1.0 (człowiek). 0.5 to dobry punkt wyjścia.</target>
+      </trans-unit>
+      <trans-unit id="660dceef85b35a0e8897f0a10d5fc519">
+        <source>Google reCAPTCHA Enterprise</source>
+        <target>Google reCAPTCHA Enterprise</target>
+      </trans-unit>
+      <trans-unit id="5119a3b94c1c89b3021ddf6d9c10418e">
+        <source>Use a site key from Google Cloud Console and an API key allowed to call the reCAPTCHA Enterprise API.</source>
+        <target>Użyj klucza witryny z Google Cloud Console i klucza API z dostępem do API reCAPTCHA Enterprise.</target>
+      </trans-unit>
+      <trans-unit id="567211f78e286e00c938772c5a27a6c4">
+        <source>Google Cloud project ID</source>
+        <target>Identyfikator projektu Google Cloud</target>
+      </trans-unit>
+      <trans-unit id="656a6828d7ef1bb791e42087c4b5ee6e">
+        <source>API key</source>
+        <target>Klucz API</target>
+      </trans-unit>
+      <trans-unit id="f75d8fa5c89351544d372cf90528ccf2">
+        <source>Site key</source>
+        <target>Klucz witryny</target>
+      </trans-unit>
+      <trans-unit id="717984c2796ccc797764b02818008d1a">
+        <source>Minimum score (score-based keys)</source>
+        <target>Minimalny wynik (klucze oparte na wyniku)</target>
+      </trans-unit>
+      <trans-unit id="78b5c433d72aedfe1e9502faab99265c">
+        <source>Create a widget at https://dash.cloudflare.com under Turnstile.</source>
+        <target>Utwórz widżet na https://dash.cloudflare.com w sekcji Turnstile.</target>
+      </trans-unit>
+      <trans-unit id="952bf87c967660b7bbd4e1eb08cefc92">
+        <source>Secret key</source>
+        <target>Klucz tajny</target>
+      </trans-unit>
+      <trans-unit id="40b9426a7b6dbd1d3596b7dd64fe81ba">
+        <source>Blacklists and whitelist</source>
+        <target>Czarne listy i biała lista</target>
+      </trans-unit>
+      <trans-unit id="4b0fdfa08c0867a9dd1654f9c22ab49a">
+        <source>IP whitelist</source>
+        <target>Biała lista IP</target>
+      </trans-unit>
+      <trans-unit id="1b2ef326f542a13f3aaaac64014ef0bb">
+        <source>These IPs never see a CAPTCHA and are never blocked. One per line.</source>
+        <target>Te adresy IP nigdy nie widzą CAPTCHA i nie są blokowane. Jeden na linię.</target>
+      </trans-unit>
+      <trans-unit id="a51d6ac8f234074214f2473684b8cc82">
+        <source>One per line: 1.2.3.4, 1.2.3.*, 1.2.3.0/24, 1.2.3.4-1.2.3.99 or IPv6. Lines starting with # are comments.</source>
+        <target>Jeden na linię: 1.2.3.4, 1.2.3.*, 1.2.3.0/24, 1.2.3.4-1.2.3.99 lub IPv6. Linie zaczynające się od # to komentarze.</target>
+      </trans-unit>
+      <trans-unit id="a2d129173cb1611502aaa8a215f8ba5e">
+        <source>One per line: spam@example.com, *@mail.ru, qq.com (domain and subdomains), *.ru (whole TLD), or any pattern with *.</source>
+        <target>Jeden na linię: spam@example.com, *@mail.ru, qq.com (domena i subdomeny), *.ru (cała domena najwyższego poziomu) lub dowolny wzorzec z *.</target>
+      </trans-unit>
+      <trans-unit id="0cb544e80c27c31ed8e001a9745fd18c">
+        <source>Blocked attempts</source>
+        <target>Zablokowane próby</target>
+      </trans-unit>
+      <trans-unit id="ea39146639ffc9738a9427fc816ad60b">
+        <source>Clear the whole log?</source>
+        <target>Wyczyścić cały dziennik?</target>
+      </trans-unit>
+      <trans-unit id="6bee5661e926f636f142c7f60a227116">
+        <source>Clear log</source>
+        <target>Wyczyść dziennik</target>
+      </trans-unit>
+      <trans-unit id="2557491405dd96ce43f55a3133cfd1fe">
+        <source>Last 30 days</source>
+        <target>Ostatnie 30 dni</target>
+      </trans-unit>
+      <trans-unit id="186a3db6201614852a3a8b1b91b2dd53">
+        <source>Nothing blocked yet.</source>
+        <target>Jeszcze nic nie zablokowano.</target>
+      </trans-unit>
+      <trans-unit id="44749712dbec183e983dcd78a7736c41">
+        <source>Date</source>
+        <target>Data</target>
+      </trans-unit>
+      <trans-unit id="d359c6df99b25183d81f7d728b71de0e">
+        <source>Form</source>
+        <target>Formularz</target>
+      </trans-unit>
+      <trans-unit id="fffcb4d1e12c96b2f571f77ad25878b8">
+        <source>Reason</source>
+        <target>Powód</target>
+      </trans-unit>
+      <trans-unit id="75ba8d70e3692ba200f0e0df37b4d2ae">
+        <source>IP address</source>
+        <target>Adres IP</target>
+      </trans-unit>
+      <trans-unit id="1e884e3078d9978e216a027ecd57fb34">
+        <source>E-mail</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="5b6cf869265c13af8566f192b4ab3d2a">
+        <source>Documentation</source>
+        <target>Dokumentacja</target>
+      </trans-unit>
+      <trans-unit id="2cd6199ee67f0eadee9d5dd14fc30f75">
+        <source>User guide (PDF)</source>
+        <target>Instrukcja obsługi (PDF)</target>
+      </trans-unit>
+      <trans-unit id="ee74f155e1a70c51305daf078b5251d8">
+        <source>Other languages:</source>
+        <target>Inne języki:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

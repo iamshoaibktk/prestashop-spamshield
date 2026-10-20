@@ -1,0 +1,102 @@
+{
+  "title": "Spam Shield - CAPTCHA, reCAPTCHA & Turnstile",
+  "subtitle": "Uživatelská příručka",
+  "labels": { "version": "Verze", "author": "Autor", "contact": "Kontakt", "page": "Strana", "contents": "Obsah", "compat": "Kompatibilita" },
+  "sections": [
+    { "title": "Přehled", "content": [
+      { "p": "Spam Shield chrání váš obchod PrestaShop před spamem, falešnými zákaznickými účty a registracemi robotů. Kombinuje neviditelný honeypot, černé listiny IP a e-mailů a CAPTCHA podle vašeho výběru: obrázkovou CAPTCHA běžící na vašem serveru, Google reCAPTCHA (v2, v3 nebo Enterprise) nebo Cloudflare Turnstile." },
+      { "p": "**Formuláře, které můžete chránit:**" },
+      { "ul": ["Kontaktní formulář", "Registrační formulář", "Přihlašovací formulář", "Formulář zapomenutého hesla", "Formulář přihlášení k newsletteru", "Formulář upozornění na naskladnění („Upozornit, až bude skladem“)"] },
+      { "p": "Modul nemění soubory jádra ani šablony motivu. Funguje s motivy Classic a Hummingbird i s většinou vlastních motivů." }
+    ] },
+    { "title": "Požadavky", "content": [
+      { "ul": ["PrestaShop 9.0 nebo novější", "PHP 8.1 nebo novější s rozšířeními GD a cURL (zapnutá téměř u každého hostingu)"] }
+    ] },
+    { "title": "Instalace", "content": [
+      { "ol": ["V administraci přejděte do **Moduly > Správce modulů**.", "Klikněte na **Nahrát modul** a vyberte soubor spamshield-x.y.z.zip.", "Po dokončení instalace klikněte na **Konfigurovat**."] },
+      { "p": "Po instalaci je modul už aktivní s obrázkovou CAPTCHA v kontaktním, registračním, newsletterovém formuláři, ve formuláři zapomenutého hesla a v upozornění na naskladnění." }
+    ] },
+    { "title": "Rychlý start", "content": [
+      { "p": "Pro většinu obchodů tato nastavení zajistí silnou ochranu s minimem obtěžování:" },
+      { "ul": ["**Typ ochrany:** Obrázková CAPTCHA, nebo Cloudflare Turnstile, pokud nechcete žádnou hádanku.", "**Neviditelný honeypot a časovač:** Ano.", "**Přeskočit pro přihlášené zákazníky:** Ano.", "**Přihlašovací formulář:** Ne, pokud nezaznamenáte útoky na přihlašovací stránku."] },
+      { "note": "Klikněte na Uložit dole v libovolném panelu: všechny panely se ukládají společně." }
+    ] },
+    { "title": "Obecná nastavení", "content": [
+      { "table": [
+        ["Nastavení", "Co dělá"],
+        ["Typ ochrany", "Kontrola zobrazená na chráněných formulářích: obrázková CAPTCHA, reCAPTCHA v2, reCAPTCHA v3, reCAPTCHA Enterprise (zaškrtávací pole nebo skóre), Cloudflare Turnstile nebo Žádná (pouze honeypot a černé listiny)."],
+        ["Kontaktní formulář ... Formulář upozornění na naskladnění", "Zapne nebo vypne ochranu každého formuláře."],
+        ["Přeskočit pro přihlášené zákazníky", "Přihlášení zákazníci neuvidí CAPTCHA v kontaktním formuláři, newsletteru ani upozornění na naskladnění."],
+        ["Neviditelný honeypot a časovač", "Přidá skryté pole, které vyplňují jen roboti, a odmítne formuláře odeslané rychleji, než stihne psát člověk."],
+        ["Minimální počet sekund před odesláním", "Formuláře odeslané rychleji jsou považovány za roboty. 2 sekundy jsou bezpečná hodnota."],
+        ["Povolit odeslání, pokud je poskytovatel nedostupný", "Pokud Google nebo Cloudflare není dostupný, formulář projde místo zablokování. Pokus se přesto zaznamená."],
+        ["Motiv widgetu", "Světlý, tmavý nebo automatický vzhled pro reCAPTCHA a Turnstile."],
+        ["Zaznamenávat zablokované pokusy", "Vede seznam zablokovaných odeslání. Záznamy starší než 90 dní se mažou automaticky."]
+      ] }
+    ] },
+    { "title": "Obrázková CAPTCHA", "content": [
+      { "p": "Obrázková CAPTCHA se generuje na vašem vlastním serveru, takže se žádná data návštěvníků neposílají třetím stranám. Podobně vypadající znaky (0/O, 1/I/L, 2/Z, 5/S, 8/B) se nikdy nepoužívají. Přijímají se velká i malá písmena." },
+      { "table": [
+        ["Obtížnost", "Kód"],
+        ["Snadná", "4 číslice, téměř bez šumu"],
+        ["Střední", "5 znaků s čarami a šumem (doporučeno)"],
+        ["Těžká", "6 otočených a zkreslených znaků"]
+      ] },
+      { "p": "Každý kód lze použít jen jednou. Návštěvníci mohou kliknout na tlačítko obnovení a získat nový kód." }
+    ] },
+    { "title": "Google reCAPTCHA v2 a v3", "content": [
+      { "ol": ["Otevřete https://www.google.com/recaptcha/admin a přihlaste se svým účtem Google.", "Vytvořte nový web. Zvolte **reCAPTCHA v2 > pole „Nejsem robot“** nebo **reCAPTCHA v3**.", "Přidejte doménu svého obchodu (například mujobchod.cz).", "Zkopírujte klíč webu a tajný klíč do odpovídajících polí modulu a klikněte na Uložit.", "V poli **Typ ochrany** vyberte stejnou verzi."] },
+      { "note": "Verze v2 a v3 používají různé klíče. Klíč v3 nebude fungovat s nastavením v2 a naopak." },
+      { "p": "**Minimální skóre v3:** reCAPTCHA v3 přidělí každému návštěvníkovi skóre od 0.0 (robot) do 1.0 (člověk). Odeslání pod minimálním skóre se blokují. Začněte s 0.5; pokud jsou blokováni skuteční zákazníci, snižte na 0.3." }
+    ] },
+    { "title": "Google reCAPTCHA Enterprise", "content": [
+      { "ol": ["V Google Cloud Console vytvořte nebo vyberte projekt a zapněte **reCAPTCHA Enterprise API**.", "V části **Zabezpečení > reCAPTCHA** vytvořte klíč pro svůj web. Zvolte klíč se zaškrtávacím polem nebo klíč založený na skóre.", "V části **Rozhraní API a služby > Přihlašovací údaje** vytvořte klíč API a omezte ho na reCAPTCHA Enterprise API.", "V modulu vyplňte ID projektu Google Cloud, klíč API a klíč webu.", "V poli Typ ochrany vyberte **Google reCAPTCHA Enterprise (zaškrtávací pole)** nebo **(skóre)** podle typu klíče."] }
+    ] },
+    { "title": "Cloudflare Turnstile", "content": [
+      { "ol": ["Přihlaste se na https://dash.cloudflare.com a otevřete **Turnstile**.", "Klikněte na **Add widget**, zadejte doménu obchodu a zvolte režim **Managed**.", "Zkopírujte klíč webu a tajný klíč do panelu Turnstile v modulu.", "V poli Typ ochrany vyberte **Cloudflare Turnstile** a uložte."] },
+      { "p": "Turnstile je zdarma, šetrný k soukromí a obvykle po návštěvníkovi nevyžaduje žádné kliknutí." }
+    ] },
+    { "title": "Černé listiny a bílá listina", "content": [
+      { "p": "Pište jedno pravidlo na řádek. Řádky začínající # jsou komentáře." },
+      { "caption": "Černá a bílá listina IP", "table": [
+        ["Pravidlo", "Odpovídá"],
+        ["203.0.113.7", "Přesně této adrese"],
+        ["203.0.113.*", "Od 203.0.113.0 do 203.0.113.255"],
+        ["203.0.113.0/24", "Stejnému rozsahu v notaci CIDR"],
+        ["203.0.113.10-203.0.113.50", "Každé adrese v tomto rozsahu"],
+        ["2001:db8::/32", "Síti IPv6"]
+      ] },
+      { "caption": "Černá listina e-mailů", "table": [
+        ["Pravidlo", "Odpovídá"],
+        ["spam@example.com", "Přesně této adrese"],
+        ["*@mail.ru", "Každé adrese na mail.ru"],
+        ["qq.com", "qq.com a všem jeho subdoménám"],
+        ["*.ru", "Každé adrese končící na .ru"],
+        ["seo*@*", "Každé adrese začínající na „seo“"]
+      ] },
+      { "note": "IP na bílé listině nikdy neuvidí CAPTCHA a nikdy nejsou blokovány. Přidejte IP své kanceláře, pokud formuláře často testujete." }
+    ] },
+    { "title": "Protokol zablokovaných pokusů", "content": [
+      { "p": "Ve spodní části stránky konfigurace vidíte, kolik odeslání bylo za posledních 30 dní zablokováno u každého formuláře, a 100 nejnovějších pokusů s datem, formulářem, důvodem, IP adresou a e-mailem." },
+      { "table": [
+        ["Důvod", "Význam"],
+        ["Vyplněný honeypot", "Bylo vyplněno skryté pole: téměř jistě robot."],
+        ["Odesláno příliš rychle", "Formulář byl odeslán dříve než za minimální dobu."],
+        ["CAPTCHA nevyplněna", "Nebyla odeslána žádná odpověď na CAPTCHA."],
+        ["Chybný kód", "Kód z obrázku byl chybný."],
+        ["Neplatný token / Nízké skóre", "Google nebo Cloudflare návštěvníka nepotvrdil."],
+        ["Černá listina IP / Černá listina e-mailů", "Návštěvník odpovídá jednomu z vašich pravidel."]
+      ] }
+    ] },
+    { "title": "Řešení problémů", "content": [
+      { "p": "**CAPTCHA se nezobrazuje.** Vymažte mezipaměť v **Pokročilé parametry > Výkon** a obnovte stránku. Zkontrolujte, že je formulář v modulu zapnutý." },
+      { "p": "**reCAPTCHA hlásí „Neplatná doména pro klíč webu“.** Přidejte doménu obchodu v administraci Google reCAPTCHA." },
+      { "p": "**reCAPTCHA v3 blokuje skutečné zákazníky.** Snižte minimální skóre na 0.3 nebo použijte Turnstile či obrázkovou CAPTCHA." },
+      { "p": "**Zablokoval jsem sám sebe.** Přidejte svou IP adresu na bílou listinu IP nebo nastavte Typ ochrany na Žádná." }
+    ] },
+    { "title": "Podpora", "content": [
+      { "p": "Tento modul je zdarma a open source pod licencí Academic Free License 3.0. S dotazy, hlášením chyb nebo zakázkovou prací se obraťte na:" },
+      { "ul": ["E-mail: iamshoaibktk@gmail.com", "WhatsApp: +923459016286"] }
+    ] }
+  ]
+}
