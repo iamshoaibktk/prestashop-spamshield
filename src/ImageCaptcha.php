@@ -79,14 +79,12 @@ class ImageCaptcha
             $glyph = imagecreatetruecolor(10, 16);
             $bg = imagecolorallocate($glyph, 255, 0, 255);
             imagefill($glyph, 0, 0, $bg);
-            imagecolortransparent($glyph, $bg);
             $fg = imagecolorallocate($glyph, random_int(10, 80), random_int(10, 80), random_int(60, 140));
             imagestring($glyph, 5, 1, 0, $char, $fg);
 
             $scale = random_int(26, 32);
             $big = imagecreatetruecolor((int) ($scale * 0.7), $scale);
             imagefill($big, 0, 0, $bg);
-            imagecolortransparent($big, $bg);
             imagecopyresized($big, $glyph, 0, 0, 0, 0, imagesx($big), imagesy($big), 10, 16);
             imagesetinterpolation($big, IMG_NEAREST_NEIGHBOUR);
             $rotated = imagerotate($big, random_int(-$maxAngle, $maxAngle), $bg);
@@ -97,6 +95,10 @@ class ImageCaptcha
             for ($gx = 0, $gw = imagesx($rotated); $gx < $gw; ++$gx) {
                 for ($gy = 0, $gh = imagesy($rotated); $gy < $gh; ++$gy) {
                     $rgb = imagecolorat($rotated, $gx, $gy);
+                    // Skip see-through pixels: GD can turn the background transparent (reads as black) when the angle is 0.
+                    if ((($rgb >> 24) & 0x7F) > 60) {
+                        continue;
+                    }
                     $r = ($rgb >> 16) & 0xFF;
                     $g = ($rgb >> 8) & 0xFF;
                     $b = $rgb & 0xFF;
