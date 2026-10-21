@@ -978,6 +978,72 @@
       "nl-NL": "Andere talen:",
       "pt-PT": "Outros idiomas:",
       "ru-RU": "Другие языки:"
+    },
+    "Top Rated on Fiverr": {
+      "fr-FR": "Top Rated sur Fiverr",
+      "es-ES": "Top Rated en Fiverr",
+      "it-IT": "Top Rated su Fiverr",
+      "pl-PL": "Top Rated na Fiverr",
+      "de-DE": "Top Rated auf Fiverr",
+      "cs-CZ": "Top Rated na Fiverru",
+      "nl-NL": "Top Rated op Fiverr",
+      "pt-PT": "Top Rated no Fiverr",
+      "ru-RU": "Top Rated на Fiverr"
+    },
+    "PrestaShop developer": {
+      "fr-FR": "Développeur PrestaShop",
+      "es-ES": "Desarrollador de PrestaShop",
+      "it-IT": "Sviluppatore PrestaShop",
+      "pl-PL": "Programista PrestaShop",
+      "de-DE": "PrestaShop-Entwickler",
+      "cs-CZ": "Vývojář PrestaShopu",
+      "nl-NL": "PrestaShop-ontwikkelaar",
+      "pt-PT": "Programador PrestaShop",
+      "ru-RU": "Разработчик PrestaShop"
+    },
+    "Need help with this module, or a custom feature for your store? I reply quickly.": {
+      "fr-FR": "Besoin d'aide avec ce module ou d'une fonctionnalité sur mesure pour votre boutique ? Je réponds rapidement.",
+      "es-ES": "¿Necesita ayuda con este módulo o una función a medida para su tienda? Respondo rápido.",
+      "it-IT": "Ti serve aiuto con questo modulo o una funzione su misura per il tuo negozio? Rispondo in fretta.",
+      "pl-PL": "Potrzebujesz pomocy z tym modułem lub funkcji na zamówienie dla sklepu? Odpowiadam szybko.",
+      "de-DE": "Hilfe mit diesem Modul oder eine individuelle Funktion für Ihren Shop gewünscht? Ich antworte schnell.",
+      "cs-CZ": "Potřebujete pomoc s modulem nebo funkci na míru pro svůj obchod? Odpovídám rychle.",
+      "nl-NL": "Hulp nodig met deze module of een functie op maat voor uw winkel? Ik reageer snel.",
+      "pt-PT": "Precisa de ajuda com este módulo ou de uma funcionalidade à medida para a sua loja? Respondo rapidamente.",
+      "ru-RU": "Нужна помощь с модулем или доработка для вашего магазина? Отвечаю быстро."
+    },
+    "Hire me on Fiverr": {
+      "fr-FR": "Me contacter sur Fiverr",
+      "es-ES": "Contráteme en Fiverr",
+      "it-IT": "Assumimi su Fiverr",
+      "pl-PL": "Zatrudnij mnie na Fiverr",
+      "de-DE": "Auf Fiverr beauftragen",
+      "cs-CZ": "Najměte mě na Fiverru",
+      "nl-NL": "Huur mij in op Fiverr",
+      "pt-PT": "Contrate-me no Fiverr",
+      "ru-RU": "Нанять на Fiverr"
+    },
+    "WhatsApp": {
+      "fr-FR": "WhatsApp",
+      "es-ES": "WhatsApp",
+      "it-IT": "WhatsApp",
+      "pl-PL": "WhatsApp",
+      "de-DE": "WhatsApp",
+      "cs-CZ": "WhatsApp",
+      "nl-NL": "WhatsApp",
+      "pt-PT": "WhatsApp",
+      "ru-RU": "WhatsApp"
+    },
+    "Email": {
+      "fr-FR": "E-mail",
+      "es-ES": "Correo",
+      "it-IT": "E-mail",
+      "pl-PL": "E-mail",
+      "de-DE": "E-Mail",
+      "cs-CZ": "E-mail",
+      "nl-NL": "E-mail",
+      "pt-PT": "E-mail",
+      "ru-RU": "E-mail"
     }
   },
   "Shop": {

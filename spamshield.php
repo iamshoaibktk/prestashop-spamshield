@@ -82,7 +82,7 @@ class Spamshield extends Module
     {
         $this->name = 'spamshield';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.1';
+        $this->version = '1.0.2';
         $this->author = 'iamshoaibktk@gmail.com';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = ['min' => '9.0.0', 'max' => _PS_VERSION_];
@@ -499,7 +499,7 @@ class Spamshield extends Module
             $output .= $errors ? $this->displayError($errors) : $this->displayConfirmation($this->trans('Settings updated.', [], 'Modules.Spamshield.Admin'));
         }
 
-        return $output . $this->renderDocs() . $this->renderForm() . $this->renderLog();
+        return $this->renderAuthor() . $output . $this->renderDocs() . $this->renderForm() . $this->renderLog();
     }
 
     /**
@@ -680,6 +680,13 @@ class Spamshield extends Module
         }
 
         return $helper->generateForm($forms);
+    }
+
+    private function renderAuthor(): string
+    {
+        $this->context->smarty->assign('author_img', $this->_path . 'views/img/author.jpg');
+
+        return $this->display(__FILE__, 'views/templates/admin/author.tpl');
     }
 
     /**
